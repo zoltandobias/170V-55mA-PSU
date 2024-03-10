@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Monday, August 21, 2023 21:30:14
+STATUS: e:\software\pspiceti\tools\bin\sch2cap -f "C:\Users\Dobzol\Downloads\DMP610DL.spice.lib" -o "C:\Users\Dobzol\Downloads\DMP610DL.spice.OLB" -i C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install/17.4.0/PSpice.ini -d 00000000001F099E
+INFO(ORSCH-1029): Using existing library 'e:\software\pspiceti\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Users\Dobzol\Downloads\DMP610DL.spice.olb'.
+STATUS: Translator stopped at Monday, August 21, 2023 21:30:14
+STATUS: 0 Error messages, 0 Warning messages

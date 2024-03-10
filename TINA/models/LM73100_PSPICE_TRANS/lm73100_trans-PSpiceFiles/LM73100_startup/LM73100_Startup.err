@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Sunday, August 20, 2023 21:57:10
+STATUS: E:\Software\PSpiceTI\tools\bin\sch2cap -f "C:\Users\Dobzol\Downloads\tina\snom703a\LM73100_PSPICE_TRANS\lm73100_trans-PSpiceFiles\LM73100_startup\LM73100_Startup.net" -o "C:\Users\Dobzol\Downloads\tina\snom703a\LM73100_PSPICE_TRANS\lm73100_trans-PSpiceFiles\LM73100_startup\LM73100_Startup.OLB" -i C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install/17.4.0/PSpice.ini -d 0000000000020AF6
+INFO(ORSCH-1029): Using existing library 'E:\Software\PSpiceTI\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Users\Dobzol\Downloads\tina\snom703a\LM73100_PSPICE_TRANS\lm73100_trans-PSpiceFiles\LM73100_startup\LM73100_Startup.olb'.
+STATUS: Translator stopped at Sunday, August 20, 2023 21:57:10
+STATUS: 0 Error messages, 0 Warning messages

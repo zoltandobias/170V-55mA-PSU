@@ -1,0 +1,128 @@
+
+**** 08/21/23 21:34:20 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-trial"  [ C:\Users\Dobzol\Downloads\tina\simulation-pspicefiles\schematic1\trial.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trial.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "E:\Software\PSpiceTI\DMN65D8LQ.spice.lib" 
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 350m 0 SKIPBP 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SIMULATION
+V_V1         N00219 0 5Vdc
+R_R1         N00219 N00726  5m TC=0,0 
+R_R2         N00238 VOUT  10m TC=0,0 
+C_C1         0 N00238  470u  TC=0,0 
+X_U2         N01078 N00862 0 IMON N00726 0 VOUT N00866 PG N01575 LM73100_TRANS
++  PARAMS:  TA=25
+R_R3         N00862 N00726  470k TC=0,0 
+R_R4         N00866 N00862  112k TC=0,0 
+R_R5         0 N00866  58k TC=0,0 
+C_C2         N01078 0  3300p  TC=0,0 
+R_R6         N01575 VOUT  47k TC=0,0 
+R_R7         0 N01575  15k TC=0,0 
+R_R8         0 IMON  2500 TC=0,0 
+R_R9         PG N01908  47k TC=0,0 
+V_V2         N01908 0 3.3Vdc
+I_I1         VOUT 0 DC 0Adc AC 0Aac
++PULSE 10m 2 50m 1u 1u 100m 1
+C_C3         0 N03432  100n  TC=0,0 
+R_R11         N03432 VOUT  220k TC=0,0 
+
+**** RESUMING trial.cir ****
+.END
+
+**** 08/21/23 21:34:20 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-trial"  [ C:\Users\Dobzol\Downloads\tina\simulation-pspicefiles\schematic1\trial.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS01          
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1            
+          KP  156.250000E+03 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    1.000000E-03 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15139): Time step =  193.1E-21 is too small in Transient Analysis at Time =  9.661E-06. Minimum allowable step size =  1.000E-18.
+         The device which is changing too fast is X_U2.C_U7_C95.
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   PG)    3.2998  ( IMON) 60.49E-09  ( VOUT)-305.5E-06  (N00219)    5.0000     
+
+(N00238)-205.5E-06 (N00726)    5.0000 (N00862)    1.3281 (N00866)     .4531     
+
+(N01078)     .0051 (N01575)-73.92E-06 (N01908)    3.3000 (N03432)-126.0E-09 
+
+
+**** Interrupt ****

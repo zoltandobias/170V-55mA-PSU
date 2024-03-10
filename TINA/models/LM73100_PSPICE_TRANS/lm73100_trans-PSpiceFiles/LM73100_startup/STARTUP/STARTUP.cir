@@ -1,0 +1,22 @@
+** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles\lm73100_startup\startup.sim ] 
+
+** Creating circuit file "STARTUP.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\LM73100_TRANS.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 80m 0 100n 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS ITL4= 40
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\LM73100_Startup.net" 
+
+
+.END

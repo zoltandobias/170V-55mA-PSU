@@ -1,0 +1,206 @@
+(ExpressProject "TPS259470ARPW_TRANS"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[02/11/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\lm73100rpw_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\lm73100_trans.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\lm73100_trans.dsn"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (Netlist_TAB "4")
+    (PSPICE_Output_File "OVP.lib")
+    (PSPICE_View_Output "FALSE")
+    (PSPICE_Subcircuit_Format "TRUE")
+    (PSPICE_Do_DRC_Markers "FALSE")
+    (PSPICE_Net_Name_Pref "TRUE")
+    (PSPICE_Hier_Format "FALSE")
+    (PSPICE_Hier_Descend "TRUE")
+    (PSPICE_Hier_DoNot_Descend "FALSE")
+    (PSPICE_Alt_Template "PSpiceTemplate")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\lm73100_trans-pspicefiles\lm73100_startup\lm73100_startup.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lm73100_trans-pspicefiles\lm73100_startup\startup.sim"
+        (DisplayName "LM73100_Startup-STARTUP")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lm73100_trans-pspicefiles\lm73100_startup\startup.sim"))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans.dsn")
+      (Path "Design Resources"
+         "C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans.dsn"
+         "LM73100_Startup")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100rpw_trans.olb")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans.dsn"
+         "LM73100_Startup" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 306 0 469"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 787 24 487")
+        (Scroll "131 44")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\A0489230\DOCUMENTS\PSPICE MODELLING\LM73100_PSPICE_TRANS\LM73100_TRANS.DSN")
+      (Schematic "LM73100_Startup")
+      (Page "PAGE1")))
+  (MPSSessionName "a0489230")
+  (PartMRUSelector
+    (LM73100RPW_TRANS
+      (FullPartName "LM73100RPW_TRANS.Normal")
+      (LibraryName
+         "C:\USERS\A0489230\DOCUMENTS\PSPICE MODELLING\LM73100_PSPICE_TRANS\LM73100RPW_TRANS.OLB")
+      (DeviceIndex "0"))
+    (ABM2/I
+      (FullPartName "ABM2/I.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (BUF_DELAY_BASIC_GEN
+      (FullPartName "BUF_DELAY_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470X_12JUN\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPWL
+      (FullPartName "VPWL.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.3\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (COMPHYS_BASIC_GEN
+      (FullPartName "COMPHYS_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470X_12JUN\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (Dbreak
+      (FullPartName "Dbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN3
+      (FullPartName "MbreakN3.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (QbreakN
+      (FullPartName "QbreakN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (AND2_BASIC_GEN
+      (FullPartName "AND2_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\ELABTRANS_WS\ELABTRANS_DS\PART_NUMBERS\TPS628660A\ACTIVE_WORK_SANKALP\EXPERIMENTS\PSPICE\TPS628660A_PSPICE_TRANS\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (INV_BASIC_GEN
+      (FullPartName "INV_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (AND4_BASIC_GEN
+      (FullPartName "AND4_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470X_17JUN\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (OR3_BASIC_GEN
+      (FullPartName "OR3_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\09NOV2020_1\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (OR2_BASIC_GEN
+      (FullPartName "OR2_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470ARPW_EXPERIMENT\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (ABM3
+      (FullPartName "ABM3.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (MUX2_BASIC_GEN
+      (FullPartName "MUX2_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470ARPW_EXPERIMENT\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (NOR2_BASIC_GEN
+      (FullPartName "NOR2_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\USERS\X0189042\DESKTOP\LM43603\ACTIVE_WORK_SANKALP\EXPERIMENTS\PSPICE\LM43603_PSPICE_TRANS\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (NAND2_BASIC_GEN
+      (FullPartName "NAND2_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470ARPW_PSPICE_TRANS\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (SRLATCHRHP_BASIC_GEN
+      (FullPartName "SRLATCHRHP_BASIC_GEN.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\TPS259470X_17JUN\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0"))
+    (SRLATCHNOP_BASIC_NEW
+      (FullPartName "SRLATCHNOP_BASIC_NEW.Normal")
+      (LibraryName
+         "D:\EXPERIMENT\TPS259470ARPW\DEVELOPMENT-PSPICE\09NOV2020_1\GENERIC_BLOCKS.OLB")
+      (DeviceIndex "0")))
+  (ISPCBBASICLICENSE "false")
+  (Folder "Logs"))

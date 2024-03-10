@@ -1,0 +1,140 @@
+(ExpressProject "simulation"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2023 S009-[08/21/23]")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "..\dmn65d8lq.spice.olb"
+        (Type "Schematic Library"))
+      (File "..\dmp610dl.spice.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\simulation.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\simulation-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\simulation-pspicefiles\schematic1\trial.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\simulation-pspicefiles\schematic1\trial.sim"
+        (DisplayName "SCHEMATIC1-trial")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (DMP610DL
+      (FullPartName "DMP610DL.Normal")
+      (LibraryName "C:\USERS\DOBZOL\DOWNLOADS\DMP610DL.SPICE.OLB")
+      (DeviceIndex "0"))
+    (DMN65D8LQ
+      (FullPartName "DMN65D8LQ.Normal")
+      (LibraryName "C:\USERS\DOBZOL\DOWNLOADS\DMN65D8LQ.SPICE.OLB")
+      (DeviceIndex "0"))
+    (DMP3007LSS
+      (FullPartName "DMP3007LSS.Normal")
+      (LibraryName "C:\USERS\DOBZOL\DOWNLOADS\DMP3007LSS.SPICE.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IPRINT
+      (FullPartName "IPRINT.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (LM73100_TRANS
+      (FullPartName "LM73100_TRANS.Normal")
+      (LibraryName
+         "C:\USERS\DOBZOL\DOWNLOADS\TINA\SNOM703A\LM73100_PSPICE_TRANS\LM73100_TRANS.OLB")
+      (DeviceIndex "0"))
+    (UVP_OVP_BLOCK
+      (FullPartName "UVP_OVP_BLOCK.Normal")
+      (LibraryName
+         "C:\USERS\DOBZOL\DOWNLOADS\TINA\SNOM703A\LM73100_PSPICE_TRANS\LM73100_TRANS.OLB")
+      (DeviceIndex "0"))
+    (LM73100_STARTUP_C11
+      (FullPartName "LM73100_STARTUP_C11.Normal")
+      (LibraryName
+         "C:\USERS\DOBZOL\DOWNLOADS\TINA\SNOM703A\LM73100_PSPICE_TRANS\LM73100_TRANS-PSPICEFILES\LM73100_STARTUP\LM73100_STARTUP.OLB")
+      (DeviceIndex "0"))
+    (BUF_BASIC_GEN
+      (FullPartName "BUF_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\USERS\DOBZOL\DOWNLOADS\TINA\SNOM703A\LM73100_PSPICE_TRANS\LM73100_TRANS.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "E:\SOFTWARE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "Dobzol")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "C:\Users\Dobzol\Downloads\dmn65d8lq.spice.olb")
+      (Path "Design Resources" "Library"
+         "C:\Users\Dobzol\Downloads\dmp610dl.spice.olb")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources" "Library"
+         "C:\Users\Dobzol\Downloads\dmp610dl.spice.olb" "DMP610DL"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 279 0 1115"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1548 24 1133")
+        (Scroll "-8 0")
+        (Zoom "154")
+        (Occurrence "/"))
+      (Path "C:\USERS\DOBZOL\DOWNLOADS\TINA\SIMULATION.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (ProjectType "Analog or A/D Mixed Mode"))

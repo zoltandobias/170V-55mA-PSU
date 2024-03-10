@@ -1,0 +1,1260 @@
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "STARTUP.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lm73100_trans_new_1.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 80m 0 100n 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS ITL4= 40
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\LM73100_Startup.net" 
+
+
+
+**** INCLUDING LM73100_Startup.net ****
+* source LM73100_TRANS
+R_RLOAD         0 N55534  {12/1} TC=0,0 
+X_C12    0 N55534 LM73100_Startup_C12 
+X_D8          VIN2 0 SMBJ18A
+R_R14         OVLO2 VIN2  2Meg TC=0,0 
+V_IOUT         VOUT2 N55534 0Vdc
+R_R17         0 OVLO2  191k TC=0,0 
+R_R25         PGTH2 VOUT2  1Meg TC=0,0 
+R_R16         0 EN_UVLO2  249k TC=0,0 
+R_R15         EN_UVLO2 VIN2  2Meg TC=0,0 
+D_D9          0 N55534 DI_B330A 
+C_C9         0 VIN2  1u  
+C_C10         0 VIN2  100n  
+V_VIN         VIN2 0  
++PULSE 0 12 100n 1n 1n 1 2
+C_C13         0 EN_UVLO2  100p  TC=0,0 
+R_R27         0 IMON2  1.15k TC=0,0 
+R_R28         0 PGTH2  124k TC=0,0 
+X_C11    0 N55534 LM73100_Startup_C11 
+R_R21         PG2 N59784  10k TC=0,0 
+V_VCC_EXT2         N59784 0 5
+X_D7          VIN2 N61002 DI_DDZ30D
+R_R20         0 N61002  887 TC=0,0 
+C_C14         0 N62462  0.01u  TC=0,0 
+R_R26         N62462 DVDT2  100 TC=0,0 
+X_U1         DVDT2 EN_UVLO2 0 IMON2 VIN2 N55790 VOUT2 OVLO2 PG2 PGTH2
++  LM73100_TRANS PARAMS: TA=25
+
+.subckt LM73100_Startup_C12 1 2  
+C_C12         1 _SR C_C12 10u  
+.model         C_C12 CAP C=1      
+RESR_C12         _SR 2 0.15   
+.ends LM73100_Startup_C12
+
+.subckt LM73100_Startup_C11 1 2  
+C_C11         1 _SR C_C11 220u  
+.model         C_C11 CAP C=1      
+RESR_C11         _SR 2 0.15   
+.ends LM73100_Startup_C11
+
+**** RESUMING STARTUP.cir ****
+.END
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DI_B330A        X_D8.DF         X_D8.DR         X_D7.DF         
+          IS    9.900000E-09   10.000000E-15    5.000000E-15    6.870000E-12 
+           N     .775           1.1             1.1             1.1          
+          BV   30                                                            
+         IBV  500.000000E-06                                                 
+          RS     .014            .5              .2            29.9          
+          TT    7.200000E-09   50.100000E-09                   50.100000E-09 
+         CJO  464.000000E-12   46.300000E-12                   15.100000E-12 
+          VJ                     .75                                         
+           M     .333            .33                             .33         
+
+
+               X_D7.DR         D_D1            Dbreak          
+          IS    1.370000E-15    1.000000E-15   10.000000E-15 
+           N    3                .1                          
+          RS   39.5              .05             .1          
+          TT                   10.000000E-12                 
+         CJO                                  100.000000E-15 
+
+
+               X_U1.X_U8_U10.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U171.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U123.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U158.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U160.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U163.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U7.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U4_U159.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U1.X_U7_U7.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U7_U10.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U7_U9.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U9_U23.d_d1 
+          IS    1.000000E-15 
+           N     .01         
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U1.X_U24.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U1.X_U22.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U1.X_U26.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS    5.000000E-03 
+          TT   10.000000E-12 
+
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS01          
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1            
+          KP  156.250000E+03 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    1.000000E-03 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_C12.C_C12     X_C11.C_C11     
+           C    1               1            
+
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_U4_U119.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U4_U164.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U4_U125.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U7_S5._U7_S5 
+         RON    1.000000E+09 
+        ROFF     .01         
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S2._U1_S2 
+         RON    1.000000E-03 
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S1._U1_S1             X_U1.X_S1._S1   
+         RON    1.000000E-03                    1.000000E-03 
+        ROFF  100.000000E+06                    1.000000E+09 
+         VON     .8                              .8          
+        VOFF     .2                              .2          
+
+
+               X_U1.X_U9_S2._U9_S2 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U9_U26.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U9_U25.s1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U3.X_S5._S5 
+         RON   80            
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U3.X_S3._S3 
+         RON   80            
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+**** 02/11/22 16:50:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "LM73100_Startup-STARTUP"  [ C:\Users\a0489230\Documents\pspice modelling\LM73100_PSPICE_TRANS\lm73100_trans-pspicefiles
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  PG2) 500.0E-09  ( VIN2)    0.0000  (DVDT2) 126.0E-06  (IMON2)-438.2E-27      
+
+(OVLO2)    0.0000  (PGTH2) 166.7E-15  (VOUT2) 1.511E-12  (N55534) 1.511E-12     
+
+(N59784)    5.0000 (N61002) 24.48E-09 (N62462) 126.0E-06 (X_D7.3)  -27.6000     
+
+(X_D8.3)  -20.0000 (X_U1.SD)    1.0000                   (EN_UVLO2)    0.0000   
+
+(X_U1.FFT)    0.0000                  (X_U1.FLT)    0.0000                      
+
+(X_U1.GHI)    0.0000                  (X_U1.RCB)    0.0000                      
+
+(X_C11._SR) 1.511E-12                 (X_C12._SR) 1.511E-12                     
+
+(X_U1.FLTB)    1.0000                 (X_U1.SWEN)    0.0000                     
+
+(X_U1.IN_INT)    0.0000               (X_U1.ISENSE)-2.094E-24                   
+
+(X_U1.N01458)    0.0000               (X_U1.N01480)    0.0000                   
+
+(X_U1.N01484)    0.0000               (X_U1.N07196)    1.0000                   
+
+(X_U1.N19667)    1.0000               (X_U1.N56097)    1.0000                   
+
+(X_U1.N65155)    1.0000               (X_U1.N65327)    1.0000                   
+
+(X_U1.N65359)    1.0000               (X_U1.U1_CAP) 6.668E-12                   
+
+(X_U1.U4_MID) 754.6E-15               (X_U1.U7_TSD)    0.0000                   
+
+(X_U1.EN_BFET)    0.0000              (X_U1.OVLO_ON)    0.0000                  
+
+(X_U1.U2_IRRP)    0.0000              (X_U1.U4_BFFC)    0.0000                  
+
+(X_U1.U4_HFFC)    0.0000              (X_U1.U7_COMP)    0.0000                  
+
+(X_U1.DVDT_OUT) 126.0E-06             (X_U1.EN_UV_OK)    0.0000                 
+
+(X_U1.OVLO_INT)    0.0000             (X_U1.U1_OV_OK)    1.0000                 
+
+(X_U1.U2_IQ_ON)    0.0000             (X_U1.U4_BGATE)    -.0759                 
+
+(X_U1.U4_HGATE)    -.0721             (X_U1.U4_RCB_N)    1.0000                 
+
+(X_U1.U4_VDROP)-754.6E-15             (X_U1.U7_PW_IN)    0.0000                 
+
+(X_U1.U7_RESET)    0.0000             (X_U1.U8_FLT_A)    0.0000                 
+
+(X_U1.N16641258)    1.0000            (X_U1.N16643982)    1.0000                
+
+(X_U1.U1_N02257)    1.0000            (X_U1.U1_N18233)     .7500                
+
+(X_U1.U1_N18291)     .1000            (X_U1.U2_IQ_OFF)    0.0000                
+
+(X_U1.U4_FWDCMP)    0.0000            (X_U1.U4_N01056) 1.511E-12                
+
+(X_U1.U4_N07016)    2.8000            (X_U1.U4_N07080)    1.0000                
+
+(X_U1.U4_N17383) 754.6E-15            (X_U1.U4_N19628)    0.0000                
+
+(X_U1.U4_N20536)    1.0000            (X_U1.U4_N28440)    0.0000                
+
+(X_U1.U4_N28498)     .0295            (X_U1.U4_N28817)     .0168                
+
+(X_U1.U7_N65057)    0.0000            (X_U1.U7_N65283)    0.0000                
+
+(X_U1.U7_N65349)    1.0000            (X_U1.U7_N65409)    0.0000                
+
+(X_U1.U7_N65553)     .5000            (X_U1.U7_N65793)    0.0000                
+
+(X_U1.U7_N66257)    2.5000            (X_U1.U7_N66375)    0.0000                
+
+(X_U1.U7_N66395)-1.511E-12            (X_U1.U7_N66399)    0.0000                
+
+(X_U1.U7_N66463)    0.0000            (X_U1.U7_N66491)   25.0000                
+
+(X_U1.U7_N66529)    5.4690            (X_U1.U7_N66593) 8.335E-15                
+
+(X_U1.U7_N66639)   25.0000            (X_U1.U7_N66815)    1.0000                
+
+(X_U1.U7_N66955) 47.85E-12            (X_U1.U7_N66993)   40.0000                
+
+(X_U1.U7_N67111)    0.0000            (X_U1.U7_N67197)   25.0000                
+
+(X_U1.U7_N67201)   25.0000            (X_U1.U7_N67293)   25.0000                
+
+(X_U1.U7_N67297)   25.0000            (X_U1.U7_N67389)   25.0000                
+
+(X_U1.U7_N67393)   25.0000            (X_U1.U7_N67485)   25.0000                
+
+(X_U1.U7_N67581)   25.0000            (X_U1.U7_N67585)   25.0000                
+
+(X_U1.U7_N67589)  154.0000            (X_U1.U7_N67689)   25.0000                
+
+(X_U1.U7_N67693)   25.0000            (X_U1.U7_N67811)   25.0000                
+
+(X_U1.U7_N67821)   25.0000            (X_U1.U7_N67895)   25.0000                
+
+(X_U1.U7_N67943)   25.0000            (X_U1.U7_N67991)   25.0000                
+
+(X_U1.U7_PW_OUT)    0.0000            (X_U1.U8_N03795)    0.0000                
+
+(X_U1.U8_N03819)    0.0000            (X_U1.U8_N03927)    0.0000                
+
+(X_U1.U8_N12555)    1.0000            (X_U1.U8_N12730)    0.0000                
+
+(X_U1.U9_INRUSH)    0.0000            (X_U1.U9_N01405)    1.2000                
+
+(X_U1.U9_N01594)     .1000            (X_U1.U9_N53583)    1.0000                
+
+(X_U1.U9_N53831)    1.0000            (X_U1.U9_N54019)    1.0000                
+
+(X_U1.U9_N54031)    1.0000            (X_U1.U9_N54043)    1.0000                
+
+(X_U1.U9_N56075)    0.0000            (X_U1.U9_N56087)    0.0000                
+
+(X_U1.U9_PG_INT)    0.0000            (X_U1.VIN_UV_OK)    0.0000                
+
+(X_U1.X_U9_U3.1)    0.0000            (X_U1.THERMAL_OK)    0.0000               
+
+(X_U1.U4_IN_5.5V)    5.5000           (X_U1.U4_OUT_INT) 1.511E-12               
+
+(X_U1.U4_OV_HFFC)    0.0000           (X_U1.U9_PG_CTRL)    1.0000               
+
+(X_U1.X_U1_U13.1)    1.0000           (X_U1.EN_UVLO_INT)    0.0000              
+
+(X_U1.GHI_LATCHED)    0.0000          (X_U1.OPEN_DETECT) 4.402E-15              
+
+(X_U1.U4_BFET_OFF)    0.0000          (X_U1.U4_GATE_MAX) 126.0E-06              
+
+(X_U1.U4_OVP_FALL)    0.0000          (X_U1.X_U3.SWEN_N)    1.0000              
+
+(X_U1.X_U4_U140.1)    0.0000          (X_U1.X_U4_U141.1)    0.0000              
+
+(X_U1.X_U4_U148.1)    1.0000          (X_U1.X_U4_U7.my5)    1.0000              
+
+(X_U1.X_U4_U7.qbr)    1.0000          (X_U1.X_U4_U7.qqq)    -.0099              
+
+(X_U1.X_U7_U7.my5)    1.0000          (X_U1.X_U7_U7.qbr)    1.0000              
+
+(X_U1.X_U7_U7.qqq) 2.002E-15          (X_U1.X_U7_U9.my5)    1.0000              
+
+(X_U1.X_U7_U9.qbr)    1.0000          (X_U1.X_U7_U9.qqq)    -.0099              
+
+(X_U1.X_U9_U25.ch)    0.0000          (X_U1.X_U9_U26.ch)    0.0000              
+
+(X_U1.U1_N14696200)    1.0000         (X_U1.U1_N14696266)    0.0000             
+
+(X_U1.U1_N14696282)    1.1000         (X_U1.U1_N14696326)    0.0000             
+
+(X_U1.U1_N14696732)    0.0000         (X_U1.U1_N14696738)    0.0000             
+
+(X_U1.U1_N14696896)    1.0000         (X_U1.U2_N16607861)    0.0000             
+
+(X_U1.U2_N16607919)    1.0000         (X_U1.U2_N16612700)    -.0010             
+
+(X_U1.U4_N16603391)    1.0000         (X_U1.U4_N16610374)-754.6E-15             
+
+(X_U1.U4_N16610469)     .0460         (X_U1.U4_N16610813)     .0120             
+
+(X_U1.U4_N16611510)-756.8E-15         (X_U1.U4_N16611524)     .3500             
+
+(X_U1.U4_N16611556)     .0010         (X_U1.U4_N16611832)    0.0000             
+
+(X_U1.U4_N16626281)     .9900         (X_U1.U4_N16627043)     .0100             
+
+(X_U1.U4_N16627192)    1.0000         (X_U1.U4_N16627401)    1.0000             
+
+(X_U1.U4_N16634381)    0.0000         (X_U1.U4_N16635065)    0.0000             
+
+(X_U1.U4_N16643116)    1.0000         (X_U1.U4_N16662637) 754.6E-15             
+
+(X_U1.U4_N16665231) 754.6E-15         (X_U1.U4_N16665898)    0.0000             
+
+(X_U1.X_U1_U4.YINT)    1.0000         (X_U1.X_U1_U5.YINT)    0.0000             
+
+(X_U1.X_U1_U9.YINT)    1.0000         (X_U1.X_U2_U4.YINT)    0.0000             
+
+(X_U1.X_U3.OPEN_SR) 742.4E-09         (X_U1.X_U4_U1.Yint)    0.0000             
+
+(X_U1.X_U4_U119.ch)    0.0000         (X_U1.X_U4_U125.ch)    1.0000             
+
+(X_U1.X_U4_U164.ch)    0.0000         (X_U1.X_U4_U7.qint)    -.0099             
+
+(X_U1.X_U7_U1.Yint)    0.0000         (X_U1.X_U7_U10.my5)    1.0000             
+
+(X_U1.X_U7_U10.qbr)    1.0000         (X_U1.X_U7_U10.qqq) 2.002E-15             
+
+(X_U1.X_U7_U2.Yint)    0.0000         (X_U1.X_U7_U7.qint) 2.002E-15             
+
+(X_U1.X_U7_U8.YINT)    0.0000         (X_U1.X_U7_U9.qint)    -.0099             
+
+(X_U1.X_U8_U10.my5)    1.0000         (X_U1.X_U8_U10.qbr)    1.0000             
+
+(X_U1.X_U8_U10.qqq) 2.002E-15         (X_U1.X_U8_U5.YINT)    0.0000             
+
+(X_U1.X_U9_U23.my5)    1.0000         (X_U1.X_U9_U23.qbr)    1.0000             
+
+(X_U1.X_U9_U23.qqq) 2.002E-15         (X_U1.X_U9_U3.INM1)    1.2000             
+
+(X_U1.X_U9_U3.INP1)    0.0000         (X_U1.X_U9_U3.INP2)    0.0000             
+
+(X_U1.THERMAL_FAULT)    0.0000        (X_U1.U4_TURN_ON_CH)    0.0000            
+
+(X_U1.X_U1_U12.YINT)    0.0000        (X_U1.X_U1_U13.INM1)    -.7500            
+
+(X_U1.X_U1_U13.INP1)    0.0000        (X_U1.X_U1_U13.INP2)     .1000            
+
+(X_U1.X_U1_U43.YINT)    0.0000        (X_U1.X_U1_U44.YINT)    0.0000            
+
+(X_U1.X_U1_U46.YINT)    1.0000        (X_U1.X_U2_U16.YINT)    0.0000            
+
+(X_U1.X_U2_U17.YINT)    0.0000        (X_U1.X_U2_U18.YINT)    1.0000            
+
+(X_U1.X_U2_U19.Yint)    0.0000        (X_U1.X_U4_U123.my5)    1.0000            
+
+(X_U1.X_U4_U123.qbr)    1.0000        (X_U1.X_U4_U123.qqq) 2.002E-15            
+
+(X_U1.X_U4_U163.my5)    1.0000        (X_U1.X_U4_U163.qbr)    1.0000            
+
+(X_U1.X_U4_U163.qqq) 2.002E-15        (X_U1.X_U4_U171.my5)    1.0000            
+
+(X_U1.X_U4_U171.qbr)    1.0000        (X_U1.X_U4_U171.qqq) 2.002E-15            
+
+(X_U1.X_U4_U7.myvss)    0.0000        (X_U1.X_U4_U7.qqqd1)    0.0000            
+
+(X_U1.X_U7_U10.qint) 2.002E-15        (X_U1.X_U7_U25.YINT)    1.0000            
+
+(X_U1.X_U7_U26.Yint)    0.0000        (X_U1.X_U7_U28.Yint)    0.0000            
+
+(X_U1.X_U7_U29.Yint)    0.0000        (X_U1.X_U7_U30.YINT)    0.0000            
+
+(X_U1.X_U7_U31.YINT)    0.0000        (X_U1.X_U7_U7.myvss)    0.0000            
+
+(X_U1.X_U7_U7.qqqd1)    0.0000        (X_U1.X_U7_U9.myvss)    0.0000            
+
+(X_U1.X_U7_U9.qqqd1)    0.0000        (X_U1.X_U8_U10.qint) 2.002E-15            
+
+(X_U1.X_U8_U58.YINT)    0.0000        (X_U1.X_U8_U76.YINT)    0.0000            
+
+(X_U1.X_U8_U78.YINT)    0.0000        (X_U1.X_U9_U23.qint) 2.002E-15            
+
+(X_U1.X_U9_U25.meas)    0.0000        (X_U1.X_U9_U26.meas)    0.0000            
+
+(X_U1.X_U9_U44.YINT)    1.0000        (X_U1.X_U9_U46.YINT)    1.0000            
+
+(X_U1.X_U9_U48.YINT)    1.0000        (X_U1.X_U9_U49.YINT)    1.0000            
+
+(X_U1.X_U9_U50.YINT)    1.0000        (X_U1.TON_TOFF_DELAY)    0.0000           
+
+(X_U1.U4_BFFC_STEADY)    0.0000       (X_U1.U4_MASK_OC_SFT)    0.0000           
+
+(X_U1.X_U1_U1.N00595)    2.5300       (X_U1.X_U1_U1.N00625)     .1100           
+
+(X_U1.X_U1_U1.N01037)    1.2000       (X_U1.X_U1_U1.N01061)     .1000           
+
+(X_U1.X_U1_U1.N01416)    1.2000       (X_U1.X_U1_U1.N01440)     .1000           
+
+(X_U1.X_U3.N14640615)    1.0000       (X_U1.X_U3.N14640755)    1.0000           
+
+(X_U1.X_U3.N14640847)    1.1000       (X_U1.X_U3.N14641085)   25.0000           
+
+(X_U1.X_U3.N14641785)   25.0000       (X_U1.X_U3.N14646292) 126.0E-06           
+
+(X_U1.X_U3.X_U8.YINT)    1.0000       (X_U1.X_U4_U115.YINT)    1.0000           
+
+(X_U1.X_U4_U116.Yint)    0.0000       (X_U1.X_U4_U117.YINT)    1.0000           
+
+(X_U1.X_U4_U119.meas)    0.0000       (X_U1.X_U4_U122.YINT)    0.0000           
+
+(X_U1.X_U4_U123.qint) 2.002E-15       (X_U1.X_U4_U124.YINT)    1.0000           
+
+(X_U1.X_U4_U125.meas)    1.0000       (X_U1.X_U4_U127.YINT)    0.0000           
+
+(X_U1.X_U4_U137.YINT)    1.0000       (X_U1.X_U4_U138.YINT)    0.0000           
+
+(X_U1.X_U4_U139.YINT)    1.0000       (X_U1.X_U4_U140.INM1)     .0460           
+
+(X_U1.X_U4_U140.INP1)    0.0000       (X_U1.X_U4_U140.INP2)    0.0000           
+
+(X_U1.X_U4_U141.INM1)     .3500       (X_U1.X_U4_U141.INP1)    0.0000           
+
+(X_U1.X_U4_U141.INP2)    0.0000       (X_U1.X_U4_U142.YINT)    0.0000           
+
+(X_U1.X_U4_U148.INM1)   -1.0621       (X_U1.X_U4_U148.INP1)    0.0000           
+
+(X_U1.X_U4_U148.INP2)     .0100       (X_U1.X_U4_U157.YINT)    0.0000           
+
+(X_U1.X_U4_U158.inp1)    0.0000       (X_U1.X_U4_U158.yin1) 53.99E-30           
+
+(X_U1.X_U4_U158.yin2)    0.0000       (X_U1.X_U4_U158.yin3)-53.99E-30           
+
+(X_U1.X_U4_U158.yin4)    0.0000       (X_U1.X_U4_U159.inp1)    0.0000           
+
+(X_U1.X_U4_U159.yin1) 53.99E-30       (X_U1.X_U4_U159.yin2)    0.0000           
+
+(X_U1.X_U4_U159.yin3)-53.99E-30       (X_U1.X_U4_U159.yin4)    0.0000           
+
+(X_U1.X_U4_U160.inp1)    0.0000       (X_U1.X_U4_U160.yin1) 53.99E-30           
+
+(X_U1.X_U4_U160.yin2)    0.0000       (X_U1.X_U4_U160.yin3)-53.99E-30           
+
+(X_U1.X_U4_U160.yin4)    0.0000       (X_U1.X_U4_U163.qint) 2.002E-15           
+
+(X_U1.X_U4_U164.meas)    0.0000       (X_U1.X_U4_U166.YINT)    0.0000           
+
+(X_U1.X_U4_U167.YINT)    0.0000       (X_U1.X_U4_U169.YINT)    1.0000           
+
+(X_U1.X_U4_U170.YINT)    1.0000       (X_U1.X_U4_U171.qint) 2.002E-15           
+
+(X_U1.X_U4_U172.YINT)    0.0000       (X_U1.X_U7_U10.myvss)    0.0000           
+
+(X_U1.X_U7_U10.qqqd1)    0.0000       (X_U1.X_U8_U10.myvss)    0.0000           
+
+(X_U1.X_U8_U10.qqqd1)    0.0000       (X_U1.X_U8_U61.YINT1)    1.0000           
+
+(X_U1.X_U8_U61.YINT2)    1.0000       (X_U1.X_U8_U61.YINT3)    0.0000           
+
+(X_U1.X_U8_U75.YINT1)    0.0000       (X_U1.X_U8_U75.YINT2)    0.0000           
+
+(X_U1.X_U8_U75.YINT3)    1.0000       (X_U1.X_U9_U23.myvss)    0.0000           
+
+(X_U1.X_U9_U23.qqqd1)    0.0000       (X_U1.X_U9_U25.reset)    1.0000           
+
+(X_U1.X_U9_U26.reset)    1.0000       (X_U1.U4_BGATE_CHARGE)    0.0000          
+
+(X_U1.U4_EN_BFET_RISE)    0.0000      (X_U1.X_U1_U1.X_U20.1)    0.0000          
+
+(X_U1.X_U1_U1.X_U23.1)    0.0000      (X_U1.X_U1_U1.X_U25.1)    0.0000          
+
+(X_U1.X_U4_U119.reset)    1.0000      (X_U1.X_U4_U123.myvss)    0.0000          
+
+(X_U1.X_U4_U123.qqqd1)    0.0000      (X_U1.X_U4_U125.reset)    0.0000          
+
+(X_U1.X_U4_U163.myvss)    0.0000      (X_U1.X_U4_U163.qqqd1)    0.0000          
+
+(X_U1.X_U4_U164.reset)    1.0000      (X_U1.X_U4_U171.myvss)    0.0000          
+
+(X_U1.X_U4_U171.qqqd1)    0.0000      (X_U1.X_U4_U7.x3.YINT)    0.0000          
+
+(X_U1.X_U7_U7.x3.YINT)    0.0000      (X_U1.X_U7_U9.x3.YINT)    0.0000          
+
+(X_U1.X_U9_U25.reset2)    1.0000      (X_U1.X_U9_U26.reset2)    1.0000          
+
+(X_U1.U4_BFET_RECOVERY)    0.0000     (X_U1.X_U3.OPEN_WINDOW)    0.0000         
+
+(X_U1.X_U3.X_U837.YINT)    0.0000     (X_U1.X_U3.X_U840.YINT)    1.0000         
+
+(X_U1.X_U4_U119.reset2)    1.0000     (X_U1.X_U4_U125.reset2)    0.0000         
+
+(X_U1.X_U4_U164.reset2)    1.0000     (X_U1.X_U7_U10.x3.YINT)    0.0000         
+
+(X_U1.X_U8_U10.x3.YINT)    0.0000     (X_U1.X_U9_U23.x3.YINT)    0.0000         
+
+(X_U1.U4_BGATE_UP_CLAMP)    5.5000    (X_U1.U4_HGATE_UP_CLAMP)    5.5000        
+
+(X_U1.X_U3.X_U839.YINT1)    0.0000    (X_U1.X_U3.X_U839.YINT2)    0.0000        
+
+(X_U1.X_U3.X_U839.YINT3)    1.0000    (X_U1.X_U4_U123.x3.YINT)    0.0000        
+
+(X_U1.X_U4_U163.x3.YINT)    0.0000    (X_U1.X_U4_U171.x3.YINT)    0.0000        
+
+(X_U1.U4_BGATE_DISCHARGE)    1.0000   (X_U1.U4_HGATE_DISCHARGE)    1.0000       
+
+(X_U1.X_U1_U1.X_U20.INM1)    2.5300   (X_U1.X_U1_U1.X_U20.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U20.INP2)    0.0000   (X_U1.X_U1_U1.X_U22.inp1)    0.0000       
+
+(X_U1.X_U1_U1.X_U22.yin1) 53.99E-30   (X_U1.X_U1_U1.X_U22.yin2)    0.0000       
+
+(X_U1.X_U1_U1.X_U22.yin3)-53.99E-30   (X_U1.X_U1_U1.X_U22.yin4)    0.0000       
+
+(X_U1.X_U1_U1.X_U23.INM1)    1.2000   (X_U1.X_U1_U1.X_U23.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U23.INP2)    0.0000   (X_U1.X_U1_U1.X_U24.inp1)    0.0000       
+
+(X_U1.X_U1_U1.X_U24.yin1) 53.99E-30   (X_U1.X_U1_U1.X_U24.yin2)    0.0000       
+
+(X_U1.X_U1_U1.X_U24.yin3)-53.99E-30   (X_U1.X_U1_U1.X_U24.yin4)    0.0000       
+
+(X_U1.X_U1_U1.X_U25.INM1)    1.2000   (X_U1.X_U1_U1.X_U25.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U25.INP2)    0.0000   (X_U1.X_U1_U1.X_U26.inp1)    0.0000       
+
+(X_U1.X_U1_U1.X_U26.yin1) 53.99E-30   (X_U1.X_U1_U1.X_U26.yin2)    0.0000       
+
+(X_U1.X_U1_U1.X_U26.yin3)-53.99E-30   (X_U1.X_U1_U1.X_U26.yin4)    0.0000       
+
+(X_U1.U4_BGATE_DOWN_CLAMP) 754.6E-15  (X_U1.U4_HGATE_DOWN_CLAMP) 754.6E-15      
+
+(X_U1.U4_HFFC_WITH_RCB_MASK)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_IOUT       1.260E-13
+    V_VIN       -4.500E-06
+    V_VCC_EXT2  -5.000E-04
+    X_D8.VZ     -2.001E-11
+    X_D7.VZ     -2.760E-11
+    X_U1.V_U4_V7  -1.672E-11
+    X_U1.V_U4_V20   0.000E+00
+    X_U1.V_U4_V25   0.000E+00
+    X_U1.V_U4_V19   0.000E+00
+    X_U1.V_U4_V24   0.000E+00
+    X_U1.V_U4_V13   0.000E+00
+    X_U1.V_U4_V21   0.000E+00
+    X_U1.V_U4_V27  -1.673E-11
+    X_U1.V_U4_V22   0.000E+00
+    X_U1.V_U4_V26   0.000E+00
+    X_U1.V_U4_V14   0.000E+00
+    X_U1.V_U4_V23   0.000E+00
+    X_U1.V_U7_V1   0.000E+00
+    X_U1.V_U7_V3   0.000E+00
+    X_U1.V_U7_V47   0.000E+00
+    X_U1.V_U7_V43   0.000E+00
+    X_U1.V_U7_V40   0.000E+00
+    X_U1.V_U7_V6  -5.001E-12
+    X_U1.V_U7_V35  -4.772E-11
+    X_U1.V_U1_V10   0.000E+00
+    X_U1.V_U1_V5  -2.201E-12
+    X_U1.V_U1_V4  -1.000E-08
+    X_U1.V_U1_V1   0.000E+00
+    X_U1.V_U9_V2   0.000E+00
+    X_U1.V_U9_V1   0.000E+00
+    X_U1.V_U2_V1   0.000E+00
+    X_U1.X_U8_U10.v1  -1.001E-12
+    X_U1.X_U8_U10.v2   9.742E-27
+    X_U1.X_U4_U171.v1  -1.001E-12
+    X_U1.X_U4_U171.v2   9.742E-27
+    X_U1.X_U4_U123.v1  -1.001E-12
+    X_U1.X_U4_U123.v2   9.742E-27
+    X_U1.X_U4_U163.v1  -1.001E-12
+    X_U1.X_U4_U163.v2   9.742E-27
+    X_U1.X_U4_U7.v1  -1.011E-12
+    X_U1.X_U4_U7.v2  -3.692E-02
+    X_U1.X_U4_H1.VH_U4_H1  -2.094E-24
+    X_U1.X_U7_U7.v1  -1.001E-12
+    X_U1.X_U7_U7.v2   9.742E-27
+    X_U1.X_U7_U10.v1  -1.001E-12
+    X_U1.X_U7_U10.v2   9.742E-27
+    X_U1.X_U7_U9.v1  -1.011E-12
+    X_U1.X_U7_U9.v2  -3.692E-02
+    X_U1.X_U1_U1.V_V5   0.000E+00
+    X_U1.X_U1_U1.V_V4   0.000E+00
+    X_U1.X_U1_U1.V_V2   0.000E+00
+    X_U1.X_U1_U1.V_V6   0.000E+00
+    X_U1.X_U1_U1.V_V1   0.000E+00
+    X_U1.X_U1_U1.V_V3   0.000E+00
+    X_U1.X_U3.V_V2  -1.574E-06
+    X_U1.X_U3.V_V1  -9.280E-09
+    X_U1.X_U3.V_V4  -2.201E-12
+    X_U1.X_U9_U23.v1  -1.001E-12
+    X_U1.X_U9_U23.v2   9.742E-27
+
+    TOTAL POWER DISSIPATION   2.54E-03  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  101.4E-09.
+         Time step =  631.0E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(X_U1.V_U7_V35)          =    7.456MA  \    2.510MA
+
+  These devices failed to converge:
+    D_D9      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  PG2) 500.0E-09  ( VIN2)   12.0000  (DVDT2) 144.1E-06  (IMON2)-7.748E-06      
+
+(OVLO2)    1.0461  (PGTH2)-320.6E-09  (VOUT2)-2.906E-06  (N55534)-2.906E-06     
+
+(N59784)    5.0000 (N61002)   11.1650 (N62462) 126.0E-06 (X_D7.3)  -16.4350     
+
+(X_D8.3)  -20.0000 (X_U1.SD)    1.0000                   (EN_UVLO2) 52.37E-06   
+
+(X_U1.FFT)    0.0000                  (X_U1.FLT)    0.0000                      
+
+(X_U1.GHI)    0.0000                  (X_U1.RCB)    0.0000                      
+
+(X_C11._SR) 1.198E-09                 (X_C12._SR) 26.25E-09                     
+
+(X_U1.FLTB)    1.0000                 (X_U1.SWEN)    0.0000                     
+
+(X_U1.IN_INT)   12.0000               (X_U1.ISENSE)-37.02E-06                   
+
+(X_U1.N01458)     .1458               (X_U1.N01480)    0.0000                   
+
+(X_U1.N01484)    0.0000               (X_U1.N07196)    1.0000                   
+
+(X_U1.N19667)    1.0000               (X_U1.N56097)    1.0000                   
+
+(X_U1.N65155)    1.0000               (X_U1.N65327)    1.0000                   
+
+(X_U1.N65359)    1.0000               (X_U1.U1_CAP)-3.376E-09                   
+
+(X_U1.U4_MID)   11.4780               (X_U1.U7_TSD)    0.0000                   
+
+(X_U1.EN_BFET)    0.0000              (X_U1.OVLO_ON)    0.0000                  
+
+(X_U1.U2_IRRP)    0.0000              (X_U1.U4_BFFC)    0.0000                  
+
+(X_U1.U4_HFFC)    0.0000              (X_U1.U7_COMP)    0.0000                  
+
+(X_U1.DVDT_OUT) 134.0E-06             (X_U1.EN_UV_OK)    0.0000                 
+
+(X_U1.OVLO_INT)    1.0461             (X_U1.U1_OV_OK)    1.0000                 
+
+(X_U1.U2_IQ_ON)    0.0000             (X_U1.U4_BGATE)   11.8890                 
+
+(X_U1.U4_HGATE)    -.0720             (X_U1.U4_RCB_N)    1.0000                 
+
+(X_U1.U4_VDROP)     .5225             (X_U1.U7_PW_IN) 742.5E-06                 
+
+(X_U1.U7_RESET)    0.0000             (X_U1.U8_FLT_A)    0.0000                 
+
+(X_U1.N16641258)    1.0000            (X_U1.N16643982)    1.0000                
+
+(X_U1.U1_N02257)    1.0000            (X_U1.U1_N18233)     .7500                
+
+(X_U1.U1_N18291)     .1000            (X_U1.U2_IQ_OFF)    0.0000                
+
+(X_U1.U4_FWDCMP)    0.0000            (X_U1.U4_N01056)-2.906E-06                
+
+(X_U1.U4_N07016)    2.8000            (X_U1.U4_N07080)    1.0000                
+
+(X_U1.U4_N17383)   11.4780            (X_U1.U4_N19628)    0.0000                
+
+(X_U1.U4_N20536)    1.0000            (X_U1.U4_N28440)    0.0000                
+
+(X_U1.U4_N28498)   12.0300            (X_U1.U4_N28817)     .0168                
+
+(X_U1.U7_N65057)    0.0000            (X_U1.U7_N65283)    0.0000                
+
+(X_U1.U7_N65349)    1.0000            (X_U1.U7_N65409)    0.0000                
+
+(X_U1.U7_N65553)     .5000            (X_U1.U7_N65793)-444.2E-06                
+
+(X_U1.U7_N66257)    2.5000            (X_U1.U7_N66375)     .5946                
+
+(X_U1.U7_N66395)   12.0000            (X_U1.U7_N66399)    0.0000                
+
+(X_U1.U7_N66463)    0.0000            (X_U1.U7_N66491)   25.0000                
+
+(X_U1.U7_N66529)    5.4690            (X_U1.U7_N66593) 50.01E-15                
+
+(X_U1.U7_N66639)   25.0000            (X_U1.U7_N66815)    1.0000                
+
+(X_U1.U7_N66955)-652.1E-12            (X_U1.U7_N66993)   40.0000                
+
+(X_U1.U7_N67111)    0.0000            (X_U1.U7_N67197)   25.0000                
+
+(X_U1.U7_N67201)   25.0000            (X_U1.U7_N67293)   25.0000                
+
+(X_U1.U7_N67297)   25.0000            (X_U1.U7_N67389)   25.0000                
+
+(X_U1.U7_N67393)   25.0000            (X_U1.U7_N67485)   25.0000                
+
+(X_U1.U7_N67581)   25.0000            (X_U1.U7_N67585)   25.0000                
+
+(X_U1.U7_N67589)  154.0000            (X_U1.U7_N67689)   25.0000                
+
+(X_U1.U7_N67693)   25.0000            (X_U1.U7_N67811)   25.0000                
+
+(X_U1.U7_N67821)   25.0000            (X_U1.U7_N67895)   25.0000                
+
+(X_U1.U7_N67943)   25.0000            (X_U1.U7_N67991)   25.0000                
+
+(X_U1.U7_PW_OUT)    0.0000            (X_U1.U8_N03795)    0.0000                
+
+(X_U1.U8_N03819)    0.0000            (X_U1.U8_N03927)     .3973                
+
+(X_U1.U8_N12555)    1.0000            (X_U1.U8_N12730)     .6881                
+
+(X_U1.U9_INRUSH)    0.0000            (X_U1.U9_N01405)    1.2000                
+
+(X_U1.U9_N01594)     .1000            (X_U1.U9_N53583)    1.0000                
+
+(X_U1.U9_N53831)    1.0000            (X_U1.U9_N54019)     .3119                
+
+(X_U1.U9_N54031)    1.0000            (X_U1.U9_N54043)    1.0000                
+
+(X_U1.U9_N56075)    0.0000            (X_U1.U9_N56087)    0.0000                
+
+(X_U1.U9_PG_INT)    0.0000            (X_U1.VIN_UV_OK)    1.0000                
+
+(X_U1.X_U9_U3.1)    0.0000            (X_U1.THERMAL_OK)    0.0000               
+
+(X_U1.U4_IN_5.5V)   17.5000           (X_U1.U4_OUT_INT)-2.906E-06               
+
+(X_U1.U4_OV_HFFC)    0.0000           (X_U1.U9_PG_CTRL)    1.0000               
+
+(X_U1.X_U1_U13.1)    1.0000           (X_U1.EN_UVLO_INT) 52.37E-06              
+
+(X_U1.GHI_LATCHED)    0.0000          (X_U1.OPEN_DETECT) 223.1E-12              
+
+(X_U1.U4_BFET_OFF)    0.0000          (X_U1.U4_GATE_MAX) 134.0E-06              
+
+(X_U1.U4_OVP_FALL)    0.0000          (X_U1.X_U3.SWEN_N)    1.0000              
+
+(X_U1.X_U4_U140.1)     .2381          (X_U1.X_U4_U141.1)     .2381              
+
+(X_U1.X_U4_U148.1)    1.0000          (X_U1.X_U4_U7.my5)    1.0000              
+
+(X_U1.X_U4_U7.qbr)    1.0000          (X_U1.X_U4_U7.qqq)    -.2594              
+
+(X_U1.X_U7_U7.my5)    1.0000          (X_U1.X_U7_U7.qbr)    1.0000              
+
+(X_U1.X_U7_U7.qqq) 101.5E-12          (X_U1.X_U7_U9.my5)    1.0000              
+
+(X_U1.X_U7_U9.qbr)    1.0000          (X_U1.X_U7_U9.qqq)    -.2594              
+
+(X_U1.X_U9_U25.ch)    0.0000          (X_U1.X_U9_U26.ch)    0.0000              
+
+(X_U1.U1_N14696200)    1.0000         (X_U1.U1_N14696266)    0.0000             
+
+(X_U1.U1_N14696282)    1.1000         (X_U1.U1_N14696326)    0.0000             
+
+(X_U1.U1_N14696732)   12.0000         (X_U1.U1_N14696738)     .9970             
+
+(X_U1.U1_N14696896)    1.0000         (X_U1.U2_N16607861)    0.0000             
+
+(X_U1.U2_N16607919)    1.0000         (X_U1.U2_N16612700)    -.0010             
+
+(X_U1.U4_N16603391)    1.0000         (X_U1.U4_N16610374)     .5225             
+
+(X_U1.U4_N16610469)     .0460         (X_U1.U4_N16610813)     .0120             
+
+(X_U1.U4_N16611510)   11.4780         (X_U1.U4_N16611524)     .3500             
+
+(X_U1.U4_N16611556)     .0010         (X_U1.U4_N16611832)    1.0000             
+
+(X_U1.U4_N16626281)     .9900         (X_U1.U4_N16627043)     .0100             
+
+(X_U1.U4_N16627192)    1.0000         (X_U1.U4_N16627401)    1.0000             
+
+(X_U1.U4_N16634381)    0.0000         (X_U1.U4_N16635065)    1.0000             
+
+(X_U1.U4_N16643116)    1.0000         (X_U1.U4_N16662637)   11.4780             
+
+(X_U1.U4_N16665231)   11.4780         (X_U1.U4_N16665898)   12.0000             
+
+(X_U1.X_U1_U4.YINT)    1.0000         (X_U1.X_U1_U5.YINT)    0.0000             
+
+(X_U1.X_U1_U9.YINT)    1.0000         (X_U1.X_U2_U4.YINT)    0.0000             
+
+(X_U1.X_U3.OPEN_SR) 2.757E-06         (X_U1.X_U4_U1.Yint)    0.0000             
+
+(X_U1.X_U4_U119.ch)    0.0000         (X_U1.X_U4_U125.ch)    1.0000             
+
+(X_U1.X_U4_U164.ch)    0.0000         (X_U1.X_U4_U7.qint)    -.2594             
+
+(X_U1.X_U7_U1.Yint)    0.0000         (X_U1.X_U7_U10.my5)    1.0000             
+
+(X_U1.X_U7_U10.qbr)    1.0000         (X_U1.X_U7_U10.qqq) 101.5E-12             
+
+(X_U1.X_U7_U2.Yint)    0.0000         (X_U1.X_U7_U7.qint) 101.5E-12             
+
+(X_U1.X_U7_U8.YINT)    0.0000         (X_U1.X_U7_U9.qint)    -.2594             
+
+(X_U1.X_U8_U10.my5)    1.0000         (X_U1.X_U8_U10.qbr)    1.0000             
+
+(X_U1.X_U8_U10.qqq) 101.5E-12         (X_U1.X_U8_U5.YINT)    0.0000             
+
+(X_U1.X_U9_U23.my5)    1.0000         (X_U1.X_U9_U23.qbr)    1.0000             
+
+(X_U1.X_U9_U23.qqq) 101.5E-12         (X_U1.X_U9_U3.INM1)    1.2000             
+
+(X_U1.X_U9_U3.INP1)    0.0000         (X_U1.X_U9_U3.INP2)    0.0000             
+
+(X_U1.THERMAL_FAULT)    0.0000        (X_U1.U4_TURN_ON_CH)    0.0000            
+
+(X_U1.X_U1_U12.YINT)    0.0000        (X_U1.X_U1_U13.INM1)    -.7499            
+
+(X_U1.X_U1_U13.INP1)    0.0000        (X_U1.X_U1_U13.INP2)     .1000            
+
+(X_U1.X_U1_U43.YINT)    0.0000        (X_U1.X_U1_U44.YINT)    0.0000            
+
+(X_U1.X_U1_U46.YINT)    1.0000        (X_U1.X_U2_U16.YINT)    0.0000            
+
+(X_U1.X_U2_U17.YINT)    0.0000        (X_U1.X_U2_U18.YINT)    1.0000            
+
+(X_U1.X_U2_U19.Yint)    0.0000        (X_U1.X_U4_U123.my5)    1.0000            
+
+(X_U1.X_U4_U123.qbr)    1.0000        (X_U1.X_U4_U123.qqq) 101.5E-12            
+
+(X_U1.X_U4_U163.my5)    1.0000        (X_U1.X_U4_U163.qbr)    1.0000            
+
+(X_U1.X_U4_U163.qqq) 101.5E-12        (X_U1.X_U4_U171.my5)    1.0000            
+
+(X_U1.X_U4_U171.qbr)    1.0000        (X_U1.X_U4_U171.qqq) 101.5E-12            
+
+(X_U1.X_U4_U7.myvss)    0.0000        (X_U1.X_U4_U7.qqqd1)    0.0000            
+
+(X_U1.X_U7_U10.qint) 101.5E-12        (X_U1.X_U7_U25.YINT)    1.0000            
+
+(X_U1.X_U7_U26.Yint)    1.0000        (X_U1.X_U7_U28.Yint)    0.0000            
+
+(X_U1.X_U7_U29.Yint)    0.0000        (X_U1.X_U7_U30.YINT)    0.0000            
+
+(X_U1.X_U7_U31.YINT)    0.0000        (X_U1.X_U7_U7.myvss)    0.0000            
+
+(X_U1.X_U7_U7.qqqd1)    0.0000        (X_U1.X_U7_U9.myvss)    0.0000            
+
+(X_U1.X_U7_U9.qqqd1)    0.0000        (X_U1.X_U8_U10.qint) 101.5E-12            
+
+(X_U1.X_U8_U58.YINT)    0.0000        (X_U1.X_U8_U76.YINT)    1.0000            
+
+(X_U1.X_U8_U78.YINT)    1.0000        (X_U1.X_U9_U23.qint) 101.5E-12            
+
+(X_U1.X_U9_U25.meas)    0.0000        (X_U1.X_U9_U26.meas)    0.0000            
+
+(X_U1.X_U9_U44.YINT)    1.0000        (X_U1.X_U9_U46.YINT)    1.0000            
+
+(X_U1.X_U9_U48.YINT)    1.0000        (X_U1.X_U9_U49.YINT)    0.0000            
+
+(X_U1.X_U9_U50.YINT)    1.0000        (X_U1.TON_TOFF_DELAY)    0.0000           
+
+(X_U1.U4_BFFC_STEADY)    0.0000       (X_U1.U4_MASK_OC_SFT)    0.0000           
+
+(X_U1.X_U1_U1.N00595)    2.5300       (X_U1.X_U1_U1.N00625)     .1100           
+
+(X_U1.X_U1_U1.N01037)    1.2000       (X_U1.X_U1_U1.N01061)     .1000           
+
+(X_U1.X_U1_U1.N01416)    1.2000       (X_U1.X_U1_U1.N01440)     .1000           
+
+(X_U1.X_U3.N14640615)    1.0000       (X_U1.X_U3.N14640755)    1.0000           
+
+(X_U1.X_U3.N14640847)    1.1000       (X_U1.X_U3.N14641085)   25.0000           
+
+(X_U1.X_U3.N14641785)   25.0000       (X_U1.X_U3.N14646292) 144.1E-06           
+
+(X_U1.X_U3.X_U8.YINT)    1.0000       (X_U1.X_U4_U115.YINT)    1.0000           
+
+(X_U1.X_U4_U116.Yint)    0.0000       (X_U1.X_U4_U117.YINT)    1.0000           
+
+(X_U1.X_U4_U119.meas)    0.0000       (X_U1.X_U4_U122.YINT)    0.0000           
+
+(X_U1.X_U4_U123.qint) 101.5E-12       (X_U1.X_U4_U124.YINT)    1.0000           
+
+(X_U1.X_U4_U125.meas)    1.0000       (X_U1.X_U4_U127.YINT)    0.0000           
+
+(X_U1.X_U4_U137.YINT)    1.0000       (X_U1.X_U4_U138.YINT)    0.0000           
+
+(X_U1.X_U4_U139.YINT)    1.0000       (X_U1.X_U4_U140.INM1)    -.4765           
+
+(X_U1.X_U4_U140.INP1)    0.0000       (X_U1.X_U4_U140.INP2)    0.0000           
+
+(X_U1.X_U4_U141.INM1)  -11.1280       (X_U1.X_U4_U141.INP1)    0.0000           
+
+(X_U1.X_U4_U141.INP2)    0.0000       (X_U1.X_U4_U142.YINT)    0.0000           
+
+(X_U1.X_U4_U148.INM1)   -1.0620       (X_U1.X_U4_U148.INP1)    0.0000           
+
+(X_U1.X_U4_U148.INP2)     .0100       (X_U1.X_U4_U157.YINT)    0.0000           
+
+(X_U1.X_U4_U158.inp1)    1.0000       (X_U1.X_U4_U158.yin1)     .0019           
+
+(X_U1.X_U4_U158.yin2)    0.0000       (X_U1.X_U4_U158.yin3)    0.0000           
+
+(X_U1.X_U4_U158.yin4)    0.0000       (X_U1.X_U4_U159.inp1)    0.0000           
+
+(X_U1.X_U4_U159.yin1) 50.32E-30       (X_U1.X_U4_U159.yin2)    0.0000           
+
+(X_U1.X_U4_U159.yin3)    0.0000       (X_U1.X_U4_U159.yin4)    0.0000           
+
+(X_U1.X_U4_U160.inp1)    1.0000       (X_U1.X_U4_U160.yin1) 31.46E-06           
+
+(X_U1.X_U4_U160.yin2)    0.0000       (X_U1.X_U4_U160.yin3)    0.0000           
+
+(X_U1.X_U4_U160.yin4)    0.0000       (X_U1.X_U4_U163.qint) 101.5E-12           
+
+(X_U1.X_U4_U164.meas)    0.0000       (X_U1.X_U4_U166.YINT)    0.0000           
+
+(X_U1.X_U4_U167.YINT)    0.0000       (X_U1.X_U4_U169.YINT)    1.0000           
+
+(X_U1.X_U4_U170.YINT)    1.0000       (X_U1.X_U4_U171.qint) 101.5E-12           
+
+(X_U1.X_U4_U172.YINT)    0.0000       (X_U1.X_U7_U10.myvss)    0.0000           
+
+(X_U1.X_U7_U10.qqqd1)    0.0000       (X_U1.X_U8_U10.myvss)    0.0000           
+
+(X_U1.X_U8_U10.qqqd1)    0.0000       (X_U1.X_U8_U61.YINT1)    1.0000           
+
+(X_U1.X_U8_U61.YINT2)    1.0000       (X_U1.X_U8_U61.YINT3)    0.0000           
+
+(X_U1.X_U8_U75.YINT1)    1.0000       (X_U1.X_U8_U75.YINT2) 601.7E-06           
+
+(X_U1.X_U8_U75.YINT3)    1.0000       (X_U1.X_U9_U23.myvss)    0.0000           
+
+(X_U1.X_U9_U23.qqqd1)    0.0000       (X_U1.X_U9_U25.reset)    1.0000           
+
+(X_U1.X_U9_U26.reset)    1.0000       (X_U1.U4_BGATE_CHARGE)    0.0000          
+
+(X_U1.U4_EN_BFET_RISE)    0.0000      (X_U1.X_U1_U1.X_U20.1)     .2089          
+
+(X_U1.X_U1_U1.X_U23.1)    0.0000      (X_U1.X_U1_U1.X_U25.1)    0.0000          
+
+(X_U1.X_U4_U119.reset)    1.0000      (X_U1.X_U4_U123.myvss)    0.0000          
+
+(X_U1.X_U4_U123.qqqd1)    0.0000      (X_U1.X_U4_U125.reset)    0.0000          
+
+(X_U1.X_U4_U163.myvss)    0.0000      (X_U1.X_U4_U163.qqqd1)    0.0000          
+
+(X_U1.X_U4_U164.reset)    1.0000      (X_U1.X_U4_U171.myvss)    0.0000          
+
+(X_U1.X_U4_U171.qqqd1)    0.0000      (X_U1.X_U4_U7.x3.YINT)    0.0000          
+
+(X_U1.X_U7_U7.x3.YINT)    0.0000      (X_U1.X_U7_U9.x3.YINT)    0.0000          
+
+(X_U1.X_U9_U25.reset2)    1.0000      (X_U1.X_U9_U26.reset2)    1.0000          
+
+(X_U1.U4_BFET_RECOVERY)    0.0000     (X_U1.X_U3.OPEN_WINDOW)    0.0000         
+
+(X_U1.X_U3.X_U837.YINT)    0.0000     (X_U1.X_U3.X_U840.YINT)    1.0000         
+
+(X_U1.X_U4_U119.reset2)    1.0000     (X_U1.X_U4_U125.reset2)    0.0000         
+
+(X_U1.X_U4_U164.reset2)    1.0000     (X_U1.X_U7_U10.x3.YINT)    0.0000         
+
+(X_U1.X_U8_U10.x3.YINT)    0.0000     (X_U1.X_U9_U23.x3.YINT)    0.0000         
+
+(X_U1.U4_BGATE_UP_CLAMP)   17.5000    (X_U1.U4_HGATE_UP_CLAMP)   16.9780        
+
+(X_U1.X_U3.X_U839.YINT1)    0.0000    (X_U1.X_U3.X_U839.YINT2)    0.0000        
+
+(X_U1.X_U3.X_U839.YINT3)    1.0000    (X_U1.X_U4_U123.x3.YINT)    0.0000        
+
+(X_U1.X_U4_U163.x3.YINT)    0.0000    (X_U1.X_U4_U171.x3.YINT)    0.0000        
+
+(X_U1.U4_BGATE_DISCHARGE)    1.0000   (X_U1.U4_HGATE_DISCHARGE)    1.0000       
+
+(X_U1.X_U1_U1.X_U20.INM1)   -9.4700   (X_U1.X_U1_U1.X_U20.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U20.INP2)    0.0000   (X_U1.X_U1_U1.X_U22.inp1)    1.0000       
+
+(X_U1.X_U1_U1.X_U22.yin1)     .5547   (X_U1.X_U1_U1.X_U22.yin2)    1.0000       
+
+(X_U1.X_U1_U1.X_U22.yin3)     .9252   (X_U1.X_U1_U1.X_U22.yin4)    1.0000       
+
+(X_U1.X_U1_U1.X_U23.INM1)    1.1999   (X_U1.X_U1_U1.X_U23.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U23.INP2)    0.0000   (X_U1.X_U1_U1.X_U24.inp1)    0.0000       
+
+(X_U1.X_U1_U1.X_U24.yin1)    0.0000   (X_U1.X_U1_U1.X_U24.yin2)    0.0000       
+
+(X_U1.X_U1_U1.X_U24.yin3)    0.0000   (X_U1.X_U1_U1.X_U24.yin4)    0.0000       
+
+(X_U1.X_U1_U1.X_U25.INM1)     .1539   (X_U1.X_U1_U1.X_U25.INP1)    0.0000       
+
+(X_U1.X_U1_U1.X_U25.INP2)    0.0000   (X_U1.X_U1_U1.X_U26.inp1)    0.0000       
+
+(X_U1.X_U1_U1.X_U26.yin1) 50.92E-30   (X_U1.X_U1_U1.X_U26.yin2)    0.0000       
+
+(X_U1.X_U1_U1.X_U26.yin3)-53.94E-30   (X_U1.X_U1_U1.X_U26.yin4)    0.0000       
+
+(X_U1.U4_BGATE_DOWN_CLAMP)   11.4780  (X_U1.U4_HGATE_DOWN_CLAMP)-2.906E-06      
+
+(X_U1.U4_HFFC_WITH_RCB_MASK)    0.0000                   
+
+
+**** Interrupt ****
